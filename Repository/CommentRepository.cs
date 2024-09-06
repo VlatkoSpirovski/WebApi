@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi.Data;
+using WebApi.Dtos.Comment;
 using WebApi.Interfaces;
 using WebApi.Models;
 
@@ -20,7 +21,7 @@ public class CommentRepository : ICommentRepository
 
     public async Task<Comment?> GetByIdAsync(int id)
     {
-        return await _context.Comments.FindAsync(id);
+        return await _context.Comments.FirstOrDefaultAsync(x => x.Id == id);
     }
 
     public async Task<Comment> CreateAsync(Comment commentModel)
@@ -28,5 +29,32 @@ public class CommentRepository : ICommentRepository
         await _context.Comments.AddAsync(commentModel);
             await _context.SaveChangesAsync();
         return commentModel;
+    }
+
+    public async Task<Comment?> UpdateAsync(int id, UpdateCommentDto commentDto)
+    {
+        {
+            var existingId = await _context.Comments.FindAsync(id);
+            if (existingId == null)
+            {
+                return null;
+            }
+            existingId.Title = commentDto.Title;
+            existingId.Content = commentDto.Content;
+            await _context.SaveChangesAsync();
+            return existingId;
+        }
+    }
+
+    public async Task<Comment> DeleteAsync(int id)
+    {
+        var existingId = await _context.Comments.FindAsync(id);
+        if (existingId == null)
+        {
+            return null;
+        }
+        _context.Comments.Remove(existingId);
+        await _context.SaveChangesAsync();
+        return existingId;
     }
 }

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Data;
 using WebApi.Dtos.Stock;
+using WebApi.Helpers;
 using WebApi.Interfaces;
 using WebApi.Models;
 
@@ -14,9 +15,20 @@ public class StockRepository : IStockRepository
     {
         _context = context;
     }
-    public async Task<List<Stock>> GetAllAsync()
+    public async Task<List<Stock>> GetAllAsync(QueryObject queryObject)
     {
-        return await _context.Stocks.Include(c => c.Comments).ToListAsync();
+        var stock = _context.Stocks.Include(c => c.Comments).AsQueryable();
+        if (!string.IsNullOrWhiteSpace(queryObject.CompanyName))
+        {
+            stock = stock.Where(c => c.CompanyName.Contains(queryObject.CompanyName));
+        }
+
+        if (!string.IsNullOrWhiteSpace(queryObject.Symbol))
+        {
+            stock = stock.Where(c => c.Symbol.Contains(queryObject.Symbol));
+        }
+
+        return await stock.ToListAsync();
     }
 
     public async ValueTask<Stock?> GetByIdAsync(int id)

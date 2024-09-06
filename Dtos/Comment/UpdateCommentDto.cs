@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApi.Dtos.Comment;
 
-public class CreateCommentDto
+public class UpdateCommentDto
 {
     [Required]
     [MinLength(5, ErrorMessage = "Title must be at least 5 characters")]
