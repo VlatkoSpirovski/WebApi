@@ -8,6 +8,8 @@
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Azure.Core.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Azure.Identity.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Humanizer.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
@@ -33,6 +35,8 @@
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Mono.TextTemplating.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Npgsql.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
@@ -123,6 +127,7 @@
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.csproj.CoreCompileInputs.cache
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.MvcApplicationPartsAssemblyInfo.cs
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.MvcApplicationPartsAssemblyInfo.cache
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.sourcelink.json
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/staticwebassets.build.json
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/staticwebassets.development.json
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/staticwebassets/msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
