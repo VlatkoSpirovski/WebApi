@@ -17,3 +17,7 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /Users/vlatkospirovski/RiderProjects/WebApi/WebApi
 build_property._RazorSourceGeneratorDebug = 
+
+[/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

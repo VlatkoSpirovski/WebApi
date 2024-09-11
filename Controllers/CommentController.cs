@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Dtos.Comment;
+using WebApi.Helpers;
 using WebApi.Interfaces;
 using WebApi.Mappers;
 using WebApi.Repository;
 
 namespace WebApi.Controllers;
-
 [Route("/api/comments")]
 [ApiController]
 public class CommentController :ControllerBase
@@ -20,12 +20,12 @@ public class CommentController :ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllComments()
+    public async Task<IActionResult> GetAllComments([FromQuery] QueryObjectComment queryObject)
     {
         if(!ModelState.IsValid)
             return BadRequest(ModelState);
         
-        var comments = await _commentRepository.GetAllAsync();
+        var comments = await _commentRepository.GetAllAsync(queryObject);
         var commentsDto = comments.Select(s => s.ToCommentDto());
         return Ok(comments);
     }

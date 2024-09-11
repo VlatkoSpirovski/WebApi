@@ -1,7 +1,9 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.VisualBasic;
 
 namespace WebApi.Models;
 
+[Table("Comments")]
 public class Comment
 {
     public int Id { get; set; }

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi.Data;
 using WebApi.Dtos.Comment;
+using WebApi.Helpers;
 using WebApi.Interfaces;
 using WebApi.Models;
 
@@ -14,9 +15,18 @@ public class CommentRepository : ICommentRepository
     {
         _context = context;
     }
-    public async Task<List<Comment>> GetAllAsync()
+    public async Task<List<Comment>> GetAllAsync(QueryObjectComment query)
     {
-        return await _context.Comments.ToListAsync();
+        var comments =  _context.Comments.AsQueryable();
+        if(!string.IsNullOrWhiteSpace(query.Title))
+        {
+            comments = comments.Where(x => x.Title.Contains(query.Title));
+        }
+        if (!string.IsNullOrWhiteSpace(query.Content))
+        {
+            comments = comments.Where(x=> x.Content.Contains(query.Content));
+        }
+        return await comments.ToListAsync();
     }
 
     public async Task<Comment?> GetByIdAsync(int id)
