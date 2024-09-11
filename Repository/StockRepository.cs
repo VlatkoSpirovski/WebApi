@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Data;
 using WebApi.Dtos.Stock;
+using WebApi.Helpers;
 using WebApi.Interfaces;
 using WebApi.Models;
 
@@ -14,14 +15,35 @@ public class StockRepository : IStockRepository
     {
         _context = context;
     }
-    public async Task<List<Stock>> GetAllAsync()
+    public async Task<List<Stock>> GetAllAsync(QueryObject queryObject)
     {
-        return await _context.Stocks.ToListAsync();
+        var stock = _context.Stocks.Include(c => c.Comments).AsQueryable();
+        if (!string.IsNullOrWhiteSpace(queryObject.CompanyName))
+        {
+            stock = stock.Where(c => c.CompanyName.Contains(queryObject.CompanyName));
+        }
+
+        if (!string.IsNullOrWhiteSpace(queryObject.Symbol))
+        {
+            stock = stock.Where(c => c.Symbol.Contains(queryObject.Symbol));
+        }
+
+        if (!string.IsNullOrWhiteSpace(queryObject.SortBy))
+        {
+            if (queryObject.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase))
+            {
+                stock = queryObject.IsDescending ? stock.OrderByDescending(s => s.Symbol) : stock.OrderBy(s => s.Symbol);
+            }
+        }
+
+        var skipNumber = (queryObject.PageNumber - 1) * queryObject.PageSize;
+        
+        return await stock.Skip(skipNumber).Take(queryObject.PageSize).ToListAsync();
     }
 
     public async ValueTask<Stock?> GetByIdAsync(int id)
     {
-        return await _context.Stocks.FindAsync(id);
+        return await _context.Stocks.Include(c => c.Comments).FirstOrDefaultAsync(i => i.Id == id);
     }
 
     public async Task<Stock> CreateAsync(Stock stockModel)
@@ -59,5 +81,10 @@ public class StockRepository : IStockRepository
         _context.Stocks.Remove(stockModel);
         await _context.SaveChangesAsync();
         return stockModel;
+    }
+
+    public Task<bool> StockExist(int id)
+    {
+        return _context.Stocks.AnyAsync(s => s.Id == id);
     }
 }

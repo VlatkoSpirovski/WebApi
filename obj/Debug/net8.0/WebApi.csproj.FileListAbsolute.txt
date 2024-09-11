@@ -8,6 +8,12 @@
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Azure.Core.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Azure.Identity.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Humanizer.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
@@ -21,6 +27,9 @@
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Identity.Client.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
@@ -33,6 +42,8 @@
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Mono.TextTemplating.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Npgsql.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
@@ -123,6 +134,9 @@
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.csproj.CoreCompileInputs.cache
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.MvcApplicationPartsAssemblyInfo.cs
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.MvcApplicationPartsAssemblyInfo.cache
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.RazorAssemblyInfo.cache
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.RazorAssemblyInfo.cs
+/Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/WebApi.sourcelink.json
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/staticwebassets.build.json
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/staticwebassets.development.json
 /Users/vlatkospirovski/RiderProjects/WebApi/WebApi/obj/Debug/net8.0/staticwebassets/msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
