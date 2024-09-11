@@ -12,7 +12,7 @@ SQL Server: Database used for storing stock, comments, and user information.
 Database Structure
 The project contains three main tables that are interconnected:
 
-Stock Table: Stores information about stock items (e.g., item name, price, and quantity).
+Stock Table: Stores information about stock items (e.g., id, symbol, company name, purchase price).
 Comment Table: Stores user comments on specific stock items. Each comment is linked to a user and a stock item.
 Account Table (User Management): Manages user details, including login credentials and roles. Each user can leave multiple comments, and each comment is linked to a user and a stock item.
 Entity Relationships
@@ -28,12 +28,12 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/your-repository-name.git
+git clone https://github.com/VlatkoSpirovski/WebApi.git
 Navigate to the project folder:
 
 bash
 Copy code
-cd your-repository-name
+cd WebApi
 Restore the dependencies:
 
 bash
@@ -53,24 +53,26 @@ Run the application:
 bash
 Copy code
 dotnet run
-The API will be running at https://localhost:5001.
+The API will be running at https://localhost:5124.
 
 API Endpoints
 Stock Endpoints:
 
-GET /api/stock: Get all stock items
+GET /api/stock: Get all stock items, filtering by Symbol, Company name. It has sorting and pagination by your wish of number
 POST /api/stock: Add a new stock item
 PUT /api/stock/{id}: Update a stock item
 DELETE /api/stock/{id}: Delete a stock item
 User Endpoints:
 
-GET /api/users: Get all users
-POST /api/users: Register a new user
-PUT /api/users/{id}: Update user information
-DELETE /api/users/{id}: Delete a user
-Comment Endpoints:
+POST /api/account/register: Register a new user
+POST /api/account/admin: Register a new admin
+POST /api/account/login Login page
 
-GET /api/comments: Get all comments
-POST /api/comments: Add a new comment
+Comment Endpoints:
+GET /api/comments: Get all comments, filtering included for Title and Content
+GET /api/comments{id}: Get a specific comments
+POST /api/comments:{stockId} Create comment to the specific stockID
 PUT /api/comments/{id}: Update a comment
 DELETE /api/comments/{id}: Delete a comment
+
+
